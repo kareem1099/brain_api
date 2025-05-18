@@ -9,7 +9,7 @@ import tensorflow as tf
 
 app = FastAPI()
 
-model = load_model("models/model_image_(Brain).h5")
+model = load_model("Models/model_image_(Brain).h5")
 brain_classes = ['brain_menin', 'brain_glioma', 'brain_pituitary', 'no_tumor']
 
 def preprocess_brain_image(path):
