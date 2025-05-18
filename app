@@ -32,4 +32,5 @@ async def predict_brain(file: UploadFile = File(...)):
     except Exception as e:
         return JSONResponse({"error": str(e)})
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+port = int(os.environ.get("PORT", 8000))
+    app.run(host='0.0.0.0', port=port)
